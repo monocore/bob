@@ -10,6 +10,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poiret One';
+  color: darkcyan;
+}
+.menu li {
+  list-style-type: none;
+  display: inline;
+}
+.menu li a {
+  font-size: 25px;
+  padding: 20px;
+  text-decoration: none;
+  color: darkcyan;
 }
 .grid {
   margin: 0 auto;
@@ -25,14 +36,55 @@ body {
 .grid-item {
   float: left;
 }
-#about {
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 5%;
+  padding: 0.5em 10px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  width: 35%;
+  float: left;
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  font-size: 18px;
+  display: inline;
+}
+#home,
+#over,
+#contact {
   display: none;
   position: fixed;
   top: 0px;
   left: 0px;
-  background-color: white;
   width: 100%;
   height: 100%;
+}
+#home,
+#over,
+#contact {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#home {
+  background-image: url('/bg/voorblad site.jpg');
+  background-color: #D9DAD5;
+}
+#over {
+  background-image: url('/bg/blad 2 site.jpg');
+  background-color: white;
+}
+#contact {
+  background-image: url('/bg/blad 3 site.jpg');
+  background-color: #E2E2E2;
 }
 #painting {
   display: none;
@@ -62,11 +114,20 @@ body {
   max-height: 100%;
 }
 @media all and (orientation: portrait) and (max-width: 414px) {
+  .menu li a {
+    padding: 10px;
+  }
   #painting .container {
     max-width: 90%;
   }
+  blockquote {
+    width: 80%;
+  }
 }
 @media all and (orientation: portrait) and (max-width: 435px) {
+  .menu li a {
+    padding: 4px;
+  }
   #painting .container {
     max-width: 92%;
   }

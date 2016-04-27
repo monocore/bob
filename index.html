@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>        
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
     <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
     <script src="./js/app.js"></script>
@@ -17,9 +17,46 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="grid grid1">
-            <div class="grid-item about"><img src="img/blad 3 site.jpg" /></div>
+    <div id="home">
+        <div class="menu">
+            <ul>
+                <li><a href="#" onclick="javascript:goHome();">home</a></li>
+                <li><a href="#" onclick="javascript:goWerk();">werk</a></li>                
+                <li><a href="#" onclick="javascript:goOver();">over</a></li>
+                <li><a href="#" onclick="javascript:goContact();">contact</a></li>
+            </ul>                  
+        </div>        
+    </div>
+    <div id="over">
+        <div class="menu">
+            <ul>
+                <li><a href="#" onclick="javascript:goHome();">home</a></li>
+                <li><a href="#" onclick="javascript:goWerk();">werk</a></li>                
+                <li><a href="#" onclick="javascript:goOver();">over</a></li>
+                <li><a href="#" onclick="javascript:goContact();">contact</a></li>
+            </ul>                  
+        </div>        
+    </div>
+    <div id="contact">
+        <div class="menu">
+            <ul>
+                <li><a href="#" onclick="javascript:goHome();">home</a></li>
+                <li><a href="#" onclick="javascript:goWerk();">werk</a></li>                
+                <li><a href="#" onclick="javascript:goOver();">over</a></li>
+                <li><a href="#" onclick="javascript:goContact();">contact</a></li>
+            </ul>                  
+        </div>        
+    </div>
+    <div id="werk">
+        <div class="menu">
+            <ul>
+                <li><a href="#" onclick="javascript:goHome();">home</a></li>
+                <li><a href="#" onclick="javascript:goWerk();">werk</a></li>                
+                <li><a href="#" onclick="javascript:goOver();">over</a></li>
+                <li><a href="#" onclick="javascript:goContact();">contact</a></li>
+            </ul>                  
+        </div>
+        <div class="grid grid1">            
             <div class="grid-item"><img src="img/176.jpg" /></div>
             <div class="grid-item"><img src="img/502.jpg" /></div>
             <div class="grid-item"><img src="img/506.jpg" /></div>
@@ -52,7 +89,7 @@
             <div class="grid-item"><img src="img/837.jpg" /></div>
             <div class="grid-item"><img src="img/838.jpg" /></div>
             <div class="grid-item"><img src="img/864.jpg" /></div>
-            <div class="grid-item"><img src="img/865.jpg" /></div>        
+            <div class="grid-item"><img src="img/865.jpg" /></div>
             <div class="grid-item"><img src="img/866.jpg" /></div>
             <div class="grid-item"><img src="img/867.jpg" /></div>
             <div class="grid-item"><img src="img/870.jpg" /></div>
@@ -88,15 +125,11 @@
             <div class="grid-item"><img src="img/992.jpg" /></div>
         </div>
     </div>
-    <div id="painting">        
+    <div id="painting">
         <div class="container">
             <img src="img/930.jpg">
         </div>
-    </div>
-    <div id="about">        
-        <div class="container">            
-        </div>
-    </div>
+    </div>    
 </body>
 
 </html>
