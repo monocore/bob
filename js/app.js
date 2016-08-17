@@ -34,13 +34,17 @@ $(document).ready(function () {
     $("#painting").on("click", function () {
         $("#painting").toggle();
     });
-    goHome();
+    goHome();    
+
 });
+
 function goHome() {
     $("#home").show();
     $("#werk").hide();
     $("#over").hide();
     $("#contact").hide();
+    $(".menu a").removeClass("active");
+    $("a.home").addClass("active");    
 }
 function goWerk() {
     $("#home").hide();
@@ -48,17 +52,23 @@ function goWerk() {
     $(".grid1").masonry('layout');
     $("#over").hide();
     $("#contact").hide();
+    $(".menu a").removeClass("active");
+    $("a.werk").addClass("active");
 }
 function goContact() {
     $("#home").hide();
     $("#werk").hide();
     $("#over").hide();
     $("#contact").show();
+    $(".menu a").removeClass("active");
+    $("a.contact").addClass("active");
 }
 function goOver() {
     $("#home").hide();
     $("#werk").hide();
     $("#over").show();
     $("#contact").hide();
+    $(".menu a").removeClass("active");
+    $("a.over").addClass("active");
 }
 

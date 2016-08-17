@@ -7,8 +7,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poiret One';
-    color: darkcyan;       
+    font-family: 'Poiret One'; 
 }
 
 .menu {
@@ -23,7 +22,10 @@ body {
          font-size: 25px;
          padding: 20px;
          text-decoration: none;
-         color: darkgray;        
+         color: darkgray;                 
+     }
+     a.active, a:hover, a:active {
+             color: black;
      }
     }
 }
@@ -67,7 +69,7 @@ blockquote p {
   display: inline;
 }
 
-#home, #over, #contact {
+#home, #contact {
     display: none;
     position: fixed;
     top: 0px;
@@ -88,11 +90,10 @@ blockquote p {
 #home {
   background-image: url("../bg/openingspag.jpg");
 }
-#over {
-    background-image: url('../bg/openingspag.jpg');    
+#over {        
 }
 #contact {
-    background-image: url('../bg/blad 3 site.jpg');    
+    background-image: url('../bg/achtergrond met handtek.jpg');    
 }
 
 #painting {
@@ -132,6 +133,18 @@ blockquote p {
   }
 }
 
+.text {
+    max-width: 80%;
+    padding: 20px 10% 20px 10%;
+    font-size: 18px
+}
+
+.contact {
+    text-align: center;
+    margin-top: 30%;
+    font-size: 18px;
+}
+    
 @media all and (orientation: portrait) and (max-width: 414px){
     .menu {
         li {        
@@ -149,8 +162,12 @@ blockquote p {
 }
 //nexus 6P
 @media all and (orientation: portrait) and (max-width: 435px) {
-    #home, #over, #contact {
-        background-position: center;
+    #home, #over {
+      background-position-y: 80px;
+    }
+
+    #contact {
+        background-position-y: 30px;
     }
     .menu {
         li {        

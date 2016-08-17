@@ -5,7 +5,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poiret One';
-  color: darkcyan;
 }
 .menu {
   text-align: center;
@@ -22,6 +21,11 @@ body {
   padding: 20px;
   text-decoration: none;
   color: darkgray;
+}
+.menu li a.active,
+.menu li a:hover,
+.menu li a:active {
+  color: black;
 }
 .grid {
   margin: 0 auto;
@@ -59,7 +63,6 @@ blockquote p {
   display: inline;
 }
 #home,
-#over,
 #contact {
   display: none;
   position: fixed;
@@ -81,11 +84,8 @@ blockquote p {
 #home {
   background-image: url("../bg/openingspag.jpg");
 }
-#over {
-  background-image: url('../bg/openingspag.jpg');
-}
 #contact {
-  background-image: url('../bg/blad 3 site.jpg');
+  background-image: url('../bg/achtergrond met handtek.jpg');
 }
 #painting {
   display: none;
@@ -114,6 +114,16 @@ blockquote p {
   max-width: 100%;
   max-height: 100%;
 }
+.text {
+  max-width: 80%;
+  padding: 20px 10% 20px 10%;
+  font-size: 18px;
+}
+.contact {
+  text-align: center;
+  margin-top: 30%;
+  font-size: 18px;
+}
 @media all and (orientation: portrait) and (max-width: 414px) {
   .menu li a {
     padding: 10px;
@@ -127,9 +137,11 @@ blockquote p {
 }
 @media all and (orientation: portrait) and (max-width: 435px) {
   #home,
-  #over,
+  #over {
+    background-position-y: 80px;
+  }
   #contact {
-    background-position: center;
+    background-position-y: 30px;
   }
   .menu li a {
     padding: 4px;
