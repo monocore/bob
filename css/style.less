@@ -1,11 +1,6 @@
 
 html {
-    /* 
-  background: url("../img/voorblad site.jpg") no-repeat center center fixed;;   
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;  
-  background-size: cover;*/  
+    background-color: #e6e6e6; 
 }
 
 
@@ -16,14 +11,20 @@ body {
     color: darkcyan;       
 }
 
-.menu li {
-    list-style-type: none;
-    display: inline;
-    a {
-        font-size: 25px;
-        padding: 20px;
-        text-decoration: none;
-        color: darkcyan;        
+.menu {
+    text-align: center;
+    ul {
+        padding: 0;
+    }
+    li {
+     list-style-type: none;
+     display: inline;
+     a {
+         font-size: 25px;
+         padding: 20px;
+         text-decoration: none;
+         color: darkgray;        
+     }
     }
 }
 .grid {
@@ -75,23 +76,23 @@ blockquote p {
     height: 100%;    
 }
 
-#home, #over, #contact {        
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+#home, #over, #contact {
+  background-repeat: no-repeat;
+  background-position: top;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;  
+  background-size: contain;
 }
 
 #home {
-    background-image: url('../bg/voorblad site.jpg');
-    background-color: #D9DAD5;
+  background-image: url("../bg/openingspag.jpg");
 }
 #over {
-    background-image: url('../bg/blad 2 site.jpg');
-    background-color: white;
+    background-image: url('../bg/openingspag.jpg');    
 }
 #contact {
-    background-image: url('../bg/blad 3 site.jpg');
-    background-color: #E2E2E2;
+    background-image: url('../bg/blad 3 site.jpg');    
 }
 
 #painting {
@@ -148,6 +149,9 @@ blockquote p {
 }
 //nexus 6P
 @media all and (orientation: portrait) and (max-width: 435px) {
+    #home, #over, #contact {
+        background-position: center;
+    }
     .menu {
         li {        
             a {
