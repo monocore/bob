@@ -90,7 +90,13 @@ blockquote p {
 #home {
   background-image: url("../bg/openingspag.jpg");
 }
-#over {        
+#over {
+    img {
+        max-width: 100%;
+    }
+    .text {
+        padding-top: 1px;
+    }
 }
 #contact {
     background-image: url('../bg/achtergrond met handtek.jpg');    
@@ -160,6 +166,15 @@ blockquote p {
         width: 80%;
     }    
 }
+
+@media all and (min-width: 1280px) {
+    #over {
+        .text {
+            max-width: 40%;
+            margin: auto;
+        }
+    }
+}
 //nexus 6P
 @media all and (orientation: portrait) and (max-width: 435px) {
     #home, #over {
@@ -198,5 +213,21 @@ blockquote p {
     }
     #painting .container {
         max-width: 88%;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    .col1, .col2 {
+        display: inline-block;
+    }
+    .col1 {
+        width: 60%;        
+    }
+    .col2 {
+        width: 39%;
+        img {
+            position: relative;
+            top: -42px;
+        }        
     }
 }
