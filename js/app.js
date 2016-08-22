@@ -45,15 +45,20 @@ $(document).ready(function () {
     var hammertime = new Hammer(document.getElementById("painting"));
     hammertime.on("swipe", function(ev){        
         if (ev.type == 'swipe'){
-            //left swipe
-            if (ev.direction == 2) {                
-                $("#painting").css({"background": "url(painting/" + $activeImage.prev().children(0).attr("src") + ") no-repeat center", "background-size": "contain"});
-                $activeImage = $activeImage.prev();
-            };
-            //right swipe
             if (ev.direction == 4) {
-                $("#painting").css({"background": "url(painting/" + $activeImage.next().children(0).attr("src") + ") no-repeat center", "background-size": "contain"});
-                $activeImage = $activeImage.next();
+                var prevUrl = $activeImage.prev().children(0).attr("src");
+                if (prevUrl) {
+                    $("#painting").css({"background": "url(painting/" + prevUrl + ") no-repeat center", "background-size": "contain"});
+                    $activeImage = $activeImage.prev();
+                }
+            };
+            
+            if (ev.direction == 2) {
+                var nextUrl = $activeImage.next().children(0).attr("src");
+                if (nextUrl) {
+                    $("#painting").css({"background": "url(painting/" + nextUrl + ") no-repeat center", "background-size": "contain"});
+                    $activeImage = $activeImage.next();
+                }
             };
         }
     });
