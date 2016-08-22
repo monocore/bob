@@ -1,3 +1,5 @@
+var $activeImage;
+
 $(document).ready(function () {        
     var $grid = $('.grid1').masonry({
         // options
@@ -13,8 +15,9 @@ $(document).ready(function () {
     var width = document.width;
     $("container").css({ width: width, margin: "auto" });
 
-    $(".grid-item img").on("click", function (ev) {        
-        $("#painting").css({"background": "url(painting/" + $(this).attr("src") + ") no-repeat center", "background-size": "contain"});
+    $(".grid-item").on("click", function (ev) {
+        $activeImage = $(this);
+        $("#painting").css({"background": "url(painting/" + $(this).children().attr("src") + ") no-repeat center", "background-size": "contain"});                
         $("#painting").toggle();
         /*$("#painting img").attr("src", "painting/" + $(this).attr("src")).load(function () {
             //Determine portrait or landscape
@@ -36,6 +39,24 @@ $(document).ready(function () {
         $("#painting").toggle();
     });
     goHome();    
+
+
+    //swipes
+    var hammertime = new Hammer(document.getElementById("painting"));
+    hammertime.on("swipe", function(ev){        
+        if (ev.type == 'swipe'){
+            //left swipe
+            if (ev.direction == 2) {                
+                $("#painting").css({"background": "url(painting/" + $activeImage.prev().children(0).attr("src") + ") no-repeat center", "background-size": "contain"});
+                $activeImage = $activeImage.prev();
+            };
+            //right swipe
+            if (ev.direction == 4) {
+                $("#painting").css({"background": "url(painting/" + $activeImage.next().children(0).attr("src") + ") no-repeat center", "background-size": "contain"});
+                $activeImage = $activeImage.next();
+            };
+        }
+    });
 
 });
 
@@ -72,4 +93,3 @@ function goOver() {
     $(".menu a").removeClass("active");
     $("a.over").addClass("active");
 }
-
