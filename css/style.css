@@ -62,7 +62,8 @@ blockquote p {
   font-size: 18px;
   display: inline;
 }
-#home {
+#home,
+#painting {
   display: none;
   position: fixed;
   top: 0px;
@@ -178,6 +179,12 @@ blockquote p {
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  #over .text {
+    padding-top: 20px;
+  }
+  #over .text p:first-child {
+    margin-top: 0px;
+  }
   .col1,
   .col2 {
     display: inline-block;
