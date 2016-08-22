@@ -98,7 +98,8 @@ blockquote p {
   position: fixed;
   top: 0px;
   left: 0px;
-  background-color: white;
+  background-color: white !important;
+  background-origin: padding-box;
   border: 0;
 }
 #painting i.fa-times {
@@ -108,11 +109,6 @@ blockquote p {
   top: 10px;
   right: 10px;
   padding: 10px;
-}
-#painting .container {
-  padding: 20px;
-  max-width: 95%;
-  max-height: 95%;
 }
 #painting img {
   width: auto;

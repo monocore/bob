@@ -13,9 +13,10 @@ $(document).ready(function () {
     var width = document.width;
     $("container").css({ width: width, margin: "auto" });
 
-    $(".grid-item img").on("click", function (ev) {
+    $(".grid-item img").on("click", function (ev) {        
+        $("#painting").css({"background": "url(painting/" + $(this).attr("src") + ") no-repeat center", "background-size": "contain"});
         $("#painting").toggle();
-        $("#painting img").attr("src", "painting/" + $(this).attr("src")).load(function () {
+        /*$("#painting img").attr("src", "painting/" + $(this).attr("src")).load(function () {
             //Determine portrait or landscape
             height = $(window).height();   // returns height of browser viewport
             width = $(window).width();
@@ -24,7 +25,7 @@ $(document).ready(function () {
             var marginLeft = ($("#painting .container").width() - $("#painting img").width()) / 2;
             var marginTop = ($("#painting .container").height() - $("#painting img").height()) / 2;
             $("#painting img").css({ "margin-left": marginLeft, "margin-top": marginTop });
-        });
+        });*/
     });
 
     $("#about").on("click", function () {
